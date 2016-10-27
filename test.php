@@ -11,7 +11,7 @@ if (isset($_GET['server']))
 
 if ($server == "")
 {
- echo "<center><font size=11 color='black'><br><br>Welcome to OpenShift Test website...<b>Active Server is: $_SERVER[SERVER_ADDR]</font><br><br>";
+ echo "<center><font size=11 color='black'><br><br>Welcome to OpenShift Test website...<b><br>Active Server is: $_SERVER[SERVER_ADDR]</font><br><br>";
 $server="$_SERVER[SERVER_ADDR]";
  echo "<META HTTP-EQUIV='refresh' content='5;URL=./test.php?server=$server'>";
 }else{
