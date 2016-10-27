@@ -18,7 +18,7 @@ if ( isset( $_GET['server'] )) {
  if ($server==$_SERVER[SERVER_ADDR]")
  {
    echo "<center><font size=11 color='black'><br><br>You are accessing server: $_SERVER[SERVER_ADDR]</font>";
-   
+   echo "<META HTTP-EQUIV='refresh' content='5;URL=./test.php?server=$server'>";
  }else{
   echo "<center><font size=11 color='black'><br><br>You have now changed from server: $server to server: $_SERVER[SERVER_ADDR]</font>";
    $server="$_SERVER[SERVER_ADDR]";
