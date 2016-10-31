@@ -1,6 +1,6 @@
 <?php
 echo "<head><title>Test for OpenShift</title></head>";
-echo "<body bgcolor='#00cc00'>";
+echo "<body bgcolor='#aa0000'>";
 
 if (isset($_GET['server']))
 {
