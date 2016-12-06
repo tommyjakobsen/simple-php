@@ -69,19 +69,13 @@ $host=$_SERVER["HTTP_HOST"];
  echo "<tr><td align=middle><iframe src=\"http://$host/test.php?rand=".rand(0,1000)."\" frameBorder=\"1\" scrolling=\"no\" id='myframe' width=270></iframe>
 <br><img src='./img/keyboard.png'>
 </td></tr>";
-?>
-<tr><td align=middle><img src='./img/leftArrow.png' height=50></td></tr>
+
+echo "<tr><td align=middle><img src='./img/leftArrow.png' height=50></td></tr>
 <tr><td colspan=2 cellspan=2 align=middle>
-
-<script>
-
-
-//<h2><b>Topology view:</b></h2>
-</script>
 
 
 <img src="./img.php?x=x&pod=$pod" class="refr" alt="" />
-</td></tr></table>
-
+</td></tr></table>";
+?>
 </body>
 </hmtl>
