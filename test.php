@@ -13,7 +13,7 @@ if(!preg_match("/$server/", $server1))
 	{
 	echo "<center><font size=3 color='red'><br><br>You have now changed to: $server</font>";
 	$handle2=fopen("$target_file2", "w");
-	fwrite($handle2, $server);
+	fwrite($handle2, $server1);
 	fclose($handle2);
 	}else{
  	echo "<center><font size=3 color='black'><br><br>You are accessing server: $server</font>";
