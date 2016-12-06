@@ -15,11 +15,8 @@ $host=php_uname('n');
 $image = imagecreatefrompng("img/openshift_total.png");
 
 
-
-
-
-//FIRST POD:
-if($server1 == $server2 || $server2 == "")
+//Create active pod and connection
+if($server1 == $server2 || !preg_match('/[0-9]/', $server2)  || (!preg_match('/[0-9]/', $server2) && !preg_match('/[0-9]/', $server1)))
 	{
 	imageline($image, 400, 75, 350, 230, $blue);
 	imagecopy($image, $activepod, 320, 230, 0,0,40,44);
