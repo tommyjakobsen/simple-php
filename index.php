@@ -74,7 +74,7 @@ echo "<tr><td align=middle><img src='./img/leftArrow.png' height=50></td></tr>
 <tr><td colspan=2 cellspan=2 align=middle>
 
 
-<img src="./img.php?x=x&pod=$pod" class="refr" alt="" />
+<img src=\"./img.php?x=x&pod=$pod\" class=\"refr\" alt=\"\" />
 </td></tr></table>";
 ?>
 </body>
