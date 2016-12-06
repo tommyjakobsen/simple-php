@@ -1,4 +1,10 @@
 <?php
+if(isset($_GET["pod"]))
+{
+    $pod=$_GET["pod"];
+}else{
+    $pod="1";
+}
 
 $target_file="server.txt";
 $target_file2="server2.txt";
@@ -15,6 +21,8 @@ $host=php_uname('n');
 $image = imagecreatefrompng("img/openshift_total.png");
 
 
+//NUMBER OF PODS
+ imagestring($image, 130, 10, 110,  "Running Pod(s): $pod", $text_color);
 //Create active pod and connection
 if($server1 == $server2 || !preg_match('/[0-9]/', $server2)  || (!preg_match('/[0-9]/', $server2) && !preg_match('/[0-9]/', $server1)))
 	{
