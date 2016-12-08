@@ -14,9 +14,15 @@ $activepod= imagecreatefrompng("img/activePod.png");
 $deadpod= imagecreatefrompng("img/deadPod.png");
 $host=php_uname('n');
 $image = imagecreatefrompng("img/openshift_total.png");
+
 //NUMBER OF PODS
  imagestring($image, 100, 10, 60,  "Running Pod(s): $pod", $text_color);
 //Create active pod and connection
+if($server1 != $ip)
+{
+$pod1="";    
+}
+
 if($pod == 1)
         {
         imageline($image, 400, 75, 350, 230, $blue);
