@@ -16,7 +16,7 @@ if(!preg_match("/$server/", $server1))
 	fwrite($handle, $server);
 	fclose($handle);
 	}else{
- 	echo "<center><font size=3 color='black'><br><br>You are accessing server: $server</font>";
+ 	echo "<center><font size=3 color='black'><br><br>You are accessing pod with local ip: $server</font>";
 	}
 
 //$handle=fopen("$target_file", "w");
