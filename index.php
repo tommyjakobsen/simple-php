@@ -1,13 +1,12 @@
 <html><head>
         <?php
 
-        if(isset($_GET["pod"]))
-{
-    $pod=$_GET["pod"];
-}else{
-    $pod="1";
-}
-    
+
+if(isset($_GET["pod"])){
+        $pod=$_GET["pod"];
+        }else{
+        $pod="1";
+        }
         $handle=fopen("./pods.txt", "w");
         fwrite($handle, $pod);
         fclose($handle);
@@ -16,7 +15,9 @@
 <meta http-equiv="Pragma" content="no-cache" />
 <meta http-equiv="Expires" content="0" />
 <title>Test for OpenShift</title>
+<?php
 
+echo "
 <script>
 var to = 2;
 function gogo(){
@@ -30,8 +31,8 @@ else{
 var obj = pix[i],
     s_rc=obj.getAttribute('src'),
     pure_src = s_rc.substring(0,s_rc.indexOf('x=x')+3);
-obj.setAttribute('src',pure_src+'&'+dummy);
-obj.setAttribute('title',pure_src+'&'+dummy);
+obj.setAttribute('src',pure_src+'&pod=$pod&'+dummy);
+obj.setAttribute('title',pure_src+'&pod=$pod&'+dummy);
 obj.nextSibling.innerHTML=obj.getAttribute('src');
 }
 }
@@ -39,8 +40,8 @@ setTimeout(gogo,to*500);
 }
 onload=gogo;
 </script>
-
-
+";
+?>
 </head>
 <body>
 <script>
