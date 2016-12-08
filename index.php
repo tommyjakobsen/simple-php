@@ -1,15 +1,16 @@
 <html><head>
-	<?php
-	if(isset($_GET["pod"]))
+        <?php
+
+        if(isset($_GET["pod"]))
 {
     $pod=$_GET["pod"];
 }else{
     $pod="1";
 }
     
-    $handle=fopen("./pods.txt", "w");
-	fwrite($handle, $pod);
-	fclose($handle);
+        $handle=fopen("./pods.txt", "w");
+        fwrite($handle, $pod);
+        fclose($handle);
 ?>
 <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
 <meta http-equiv="Pragma" content="no-cache" />
@@ -47,7 +48,7 @@ function refreshIframe(){
 var iframe = document.getElementById('myframe');
 iframe.src = iframe.src;
 }
-setInterval(refreshIframe, 6000);
+setInterval(refreshIframe, 8000);
 </script>
 
 <script>
@@ -69,14 +70,8 @@ setInterval(refreshIframe, 3000);
 <tr><td align=middle></td></tr>
 <?php
     
-if(isset($_GET["pod"]))
-{
-    $pod=$_GET["pod"];
-}else{
-    $pod="2";
-}
 $host=$_SERVER["HTTP_HOST"];
-echo "<tr><td align=middle><iframe src=\"http://$host/test.php?rand=".rand(0,1000)."\&pod=$pod\" frameBorder=\"1\" scrolling=\"no\" id='myframe' width=270></iframe> <br><img src='./img/keyboard.png'> </td></tr>";
+echo "<tr><td align=middle><iframe src=\"http://$host/test.php\" frameBorder=\"1\" scrolling=\"no\" id='myframe' width=270></iframe> <br><img src='./img/keyboard.png'> </td></tr>";
 echo "<tr><td align=middle><img src='./img/leftArrow.png' height=50></td></tr>
 <tr><td colspan=2 cellspan=2 align=middle>
 <img src=\"./img.php?x=x&pod=$pod\" class=\"refr\" alt=\"\" />
