@@ -63,8 +63,12 @@ if(isset($_GET["pod"]))
 {
     $pod=$_GET["pod"];
 }else{
-    $pod="2";
+    $pod="1";
 }
+    
+    $handle=fopen("./pods.txt", "w");
+	fwrite($handle, $pod);
+	fclose($handle);
 
 $host=$_SERVER["HTTP_HOST"];
 echo "<tr><td align=middle><iframe src=\"http://$host/test.php?rand=".rand(0,1000)."\&pod=$pod\" frameBorder=\"1\" scrolling=\"no\" id='myframe' width=270></iframe> <br><img src='./img/keyboard.png'> </td></tr>";
