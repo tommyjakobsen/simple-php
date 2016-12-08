@@ -18,8 +18,8 @@ else{
 var obj = pix[i],
     s_rc=obj.getAttribute('src'),
     pure_src = s_rc.substring(0,s_rc.indexOf('x=x')+3);
-obj.setAttribute('src',pure_src+'&'+dummy);
-obj.setAttribute('title',pure_src+'&'+dummy);
+obj.setAttribute('src',pure_src+'?rand='+dummy);
+obj.setAttribute('title',pure_src+'?rand='+dummy);
 obj.nextSibling.innerHTML=obj.getAttribute('src');
 }
 }
@@ -71,7 +71,7 @@ if(isset($_GET["pod"]))
 	fclose($handle);
 
 $host=$_SERVER["HTTP_HOST"];
-echo "<tr><td align=middle><iframe src=\"http://$host/test.php?rand=".rand(0,1000)."\&pod=$pod\" frameBorder=\"1\" scrolling=\"no\" id='myframe' width=270></iframe> <br><img src='./img/keyboard.png'> </td></tr>";
+echo "<tr><td align=middle><iframe src=\"http://$host/test.php\" frameBorder=\"1\" scrolling=\"no\" id='myframe' width=270></iframe> <br><img src='./img/keyboard.png'> </td></tr>";
 echo "<tr><td align=middle><img src='./img/leftArrow.png' height=50></td></tr>
 <tr><td colspan=2 cellspan=2 align=middle>
 <img src=\"./img.php?x=x&pod=$pod\" class=\"refr\" alt=\"\" />
