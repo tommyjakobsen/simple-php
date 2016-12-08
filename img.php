@@ -27,22 +27,23 @@ if(preg_match('/$ip/' , $server1))
 
 if($pod == 1)
         {
-        imageline(${$pod1}, 400, 75, 350, 230, $blue);
-        imagecopy($image, $activepod, 320, 230, 0,0,40,44);
+        imageline($image, 400, 75, 350, 230, $blue);
+        imagecopy($image, ${$pod1}, 320, 230, 0,0,40,44);
         }
 
 if($pod  == 2)
         {
-        imageline(${$pod1}, 400, 75, 430, 233, $blue);
-        imagecopy($image, $activepod, 420, 230, 0,0,40,44);
+ 
+        imageline($image, 400, 75, 430, 233, $blue);
+        imagecopy($image, ${$pod1}, 420, 230, 0,0,40,44);
         imageline($image, 400, 75, 350, 230, $blue);
         imagecopy($image, $activepod, 320, 230, 0,0,40,44);
         }
 
 if($pod  == 3)
         {
-        imageline(${$pod1}, 400, 75, 430, 233, $blue);
-        imagecopy($image, $activepod, 420, 230, 0,0,40,44);
+        imageline($image, 400, 75, 430, 233, $blue);
+        imagecopy($image, ${$pod1}, 420, 230, 0,0,40,44);
         imageline($image, 400, 75, 350, 230, $blue);
         imagecopy($image, $activepod, 320, 230, 0,0,40,44);
         imageline($image, 400, 75, 550, 230, $blue);
