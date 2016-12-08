@@ -1,16 +1,12 @@
 <?php
-if(isset($_GET["pod"]))
-{
-    $pod=$_GET["pod"];
-}else{
-    $pod="1";
-}
+
 $ip="$_SERVER[SERVER_ADDR]";
 
 $target_file="server.txt";
 $target_file2="server2.txt";
 $server1 = file_get_contents("$target_file");
 $server2 = file_get_contents("$target_file2");
+$pod=file_get_contents("./pods.txt");
 //
 $activepod= imagecreatefrompng("img/activePod.png");
 $deadpod= imagecreatefrompng("img/deadPod.png");
