@@ -1,7 +1,8 @@
-<html><head>
+
         <?php
-
-
+flush();
+ob_flush();
+echo "<html><head>";
 if(isset($_GET["pod"])){
         $pod=$_GET["pod"];
         }else{
@@ -10,6 +11,8 @@ if(isset($_GET["pod"])){
         $handle=fopen("./pods.txt", "w");
         fwrite($handle, $pod);
         fclose($handle);
+flush();
+ob_flush();
 ?>
 <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
 <meta http-equiv="Pragma" content="no-cache" />
@@ -18,6 +21,8 @@ if(isset($_GET["pod"])){
 <?php
 
 echo "
+flush();
+ob_flush();
 <script>
 var to = 2;
 function gogo(){
@@ -41,6 +46,8 @@ setTimeout(gogo,to*500);
 onload=gogo;
 </script>
 ";
+flush();
+ob_flush();
 ?>
 </head>
 <body>
@@ -70,13 +77,19 @@ setInterval(refreshIframe, 3000);
 <table border=0 cellspacing=0>
 <tr><td align=middle></td></tr>
 <?php
-    
+ flush();
+ob_flush();   
 $host=$_SERVER["HTTP_HOST"];
 echo "<tr><td align=middle><iframe src=\"http://$host/test.php\" frameBorder=\"1\" scrolling=\"no\" id='myframe' width=270></iframe> <br><img src='./img/keyboard.png'> </td></tr>";
+flush();
+ob_flush();
 echo "<tr><td align=middle><img src='./img/leftArrow.png' height=50></td></tr>
+
 <tr><td colspan=2 cellspan=2 align=middle>
 <img src=\"./img.php?x=x&pod=$pod\" class=\"refr\" alt=\"\" />
 </td></tr></table>";
+flush();
+ob_flush();
 ?>
 </body>
 </hmtl>
