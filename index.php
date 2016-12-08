@@ -19,10 +19,10 @@ ob_flush();
 <meta http-equiv="Expires" content="0" />
 <title>Test for OpenShift</title>
 <?php
-
-echo "
 flush();
 ob_flush();
+echo "
+
 <script>
 var to = 2;
 function gogo(){
