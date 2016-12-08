@@ -18,20 +18,22 @@ $image = imagecreatefrompng("img/openshift_total.png");
 //NUMBER OF PODS
  imagestring($image, 100, 10, 60,  "Running Pod(s): $pod", $text_color);
 //Create active pod and connection
-if($server1 != $ip)
+if(preg_match('/$ip/' , $server1))
 {
-$pod1="";    
+    $pod1="activepod";    
+}else{
+    $pod1="deadpod";
 }
 
 if($pod == 1)
         {
-        imageline($image, 400, 75, 350, 230, $blue);
+        imageline(${$pod1}, 400, 75, 350, 230, $blue);
         imagecopy($image, $activepod, 320, 230, 0,0,40,44);
         }
 
 if($pod  == 2)
         {
-        imageline($image, 400, 75, 430, 233, $blue);
+        imageline(${$pod1}, 400, 75, 430, 233, $blue);
         imagecopy($image, $activepod, 420, 230, 0,0,40,44);
         imageline($image, 400, 75, 350, 230, $blue);
         imagecopy($image, $activepod, 320, 230, 0,0,40,44);
@@ -39,7 +41,7 @@ if($pod  == 2)
 
 if($pod  == 3)
         {
-        imageline($image, 400, 75, 430, 233, $blue);
+        imageline(${$pod1}, 400, 75, 430, 233, $blue);
         imagecopy($image, $activepod, 420, 230, 0,0,40,44);
         imageline($image, 400, 75, 350, 230, $blue);
         imagecopy($image, $activepod, 320, 230, 0,0,40,44);
