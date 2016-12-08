@@ -56,7 +56,7 @@ var iframe = document.getElementById('myframe2');
 iframe.src = iframe.src;
 //alert(iframe.src);
 }
-setInterval(refreshIframe, 6000);
+setInterval(refreshIframe, 3000);
 </script>
 
 
