@@ -20,7 +20,7 @@ $image = imagecreatefrompng("img/openshift_total.png");
 //NUMBER OF PODS
  imagestring($image, 100, 10, 60,  "Running Pod(s): $pod", $text_color);
 //Create active pod and connection
-if($ip == preg_replace('/\n/', '', $server1))
+if( "$ip" == "$server1")
 {
     $pod1="activepod";    
 }else{
