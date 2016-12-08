@@ -6,11 +6,10 @@
 
 <script>
 var to = 2;
-//var pods = oForm.elements["pod"];
-var pods = document.getElementsByName("pod")[0].value;
+
 function gogo(){
 var d=new Date(),
-    dummy='date='+pods,
+    dummy=d.getTime(),
         i=0,
         pix=document.images;
 for(; i < pix.length; i++){
@@ -26,6 +25,7 @@ obj.nextSibling.innerHTML=obj.getAttribute('src');
 }
 setTimeout(gogo,to*500);
 }
+
 onload=gogo;
 </script>
 
@@ -63,7 +63,7 @@ if(isset($_GET["pod"]))
 {
     $pod=$_GET["pod"];
 }else{
-    $pod="";
+    $pod="2";
 }
 
 $host=$_SERVER["HTTP_HOST"];
