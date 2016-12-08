@@ -14,7 +14,7 @@ $server="$_SERVER[SERVER_ADDR]";
 if(!preg_match("/$server/", $server1))
         {
         ob_flush();
-        echo "<center><font size=3 color='red'><br><br>You have now changed to: $server</font>";
+        echo "<center><font size=3 color='red'><br><br>You have now changed pod: $server</font>";
         ob_end_flush();
         ob_end_clean();
         sleep(4);
@@ -22,7 +22,7 @@ if(!preg_match("/$server/", $server1))
         fwrite($handle2, $server);
         fclose($handle2);
         }else{
-        echo "<center><font size=3 color='black'><br><br>You are accessing server: $server</font>";
+        echo "<center><font size=3 color='black'><br><br>You are accessing pod<br>with internal IP: $server</font>";
         }
 
 $handle=fopen("$target_file", "w");
