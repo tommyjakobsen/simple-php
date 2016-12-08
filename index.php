@@ -1,4 +1,16 @@
 <html><head>
+	<?php
+	if(isset($_GET["pod"]))
+{
+    $pod=$_GET["pod"];
+}else{
+    $pod="1";
+}
+    
+    $handle=fopen("./pods.txt", "w");
+	fwrite($handle, $pod);
+	fclose($handle);
+?>
 <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
 <meta http-equiv="Pragma" content="no-cache" />
 <meta http-equiv="Expires" content="0" />
@@ -59,16 +71,6 @@ setInterval(refreshIframe, 6000);
 <tr><td align=middle></td></tr>
 <?php
     
-if(isset($_GET["pod"]))
-{
-    $pod=$_GET["pod"];
-}else{
-    $pod="1";
-}
-    
-    $handle=fopen("./pods.txt", "w");
-	fwrite($handle, $pod);
-	fclose($handle);
 
 $host=$_SERVER["HTTP_HOST"];
 echo "<tr><td align=middle><iframe src=\"http://$host/test.php\" frameBorder=\"1\" scrolling=\"no\" id='myframe' width=270></iframe> <br><img src='./img/keyboard.png'> </td></tr>";
