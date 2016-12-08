@@ -30,8 +30,8 @@ else{
 var obj = pix[i],
     s_rc=obj.getAttribute('src'),
     pure_src = s_rc.substring(0,s_rc.indexOf('x=x')+3);
-obj.setAttribute('src',pure_src+'?rand='+dummy);
-obj.setAttribute('title',pure_src+'?rand='+dummy);
+obj.setAttribute('src',pure_src+'&rand='+dummy);
+obj.setAttribute('title',pure_src+'&rand='+dummy);
 obj.nextSibling.innerHTML=obj.getAttribute('src');
 }
 }
@@ -58,7 +58,7 @@ var iframe = document.getElementById('myframe2');
 iframe.src = iframe.src;
 //alert(iframe.src);
 }
-setInterval(refreshIframe, 6000);
+setInterval(refreshIframe, 3000);
 </script>
 
 
