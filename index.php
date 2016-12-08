@@ -81,8 +81,7 @@ setInterval(refreshIframe, 3000);
 ob_flush();   
 $host=$_SERVER["HTTP_HOST"];
 echo "<tr><td align=middle><iframe src=\"http://$host/test.php\" frameBorder=\"1\" scrolling=\"no\" id='myframe' width=270></iframe> <br><img src='./img/keyboard.png'> </td></tr>";
-flush();
-ob_flush();
+
 echo "<tr><td align=middle><img src='./img/leftArrow.png' height=50></td></tr>
 
 <tr><td colspan=2 cellspan=2 align=middle>
