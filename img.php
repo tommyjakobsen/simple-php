@@ -1,7 +1,7 @@
 <?php
 
 
-$pod=file_get_contents("pods.txt");
+$pod=$_GET["pod"];
 
 
 $ip="$_SERVER[SERVER_ADDR]";
