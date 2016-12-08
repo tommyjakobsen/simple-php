@@ -12,15 +12,15 @@ $server="$_SERVER[SERVER_ADDR]";
 if(!preg_match("/$server/", $server1))
 	{
 	echo "<center><font size=3 color='red'><br><br>You have now changed to: $server</font>";
-	$handle2=fopen("$target_file2", "w");
-	fwrite($handle2, $server1);
-	fclose($handle2);
+	$handle=fopen("$target_file", "w");
+	fwrite($handle, $server);
+	fclose($handle);
 	}else{
  	echo "<center><font size=3 color='black'><br><br>You are accessing server: $server</font>";
 	}
 
-$handle=fopen("$target_file", "w");
-fwrite($handle, $server);
-fclose($handle);
+//$handle=fopen("$target_file", "w");
+//fwrite($handle, $server);
+//fclose($handle);
  
 echo "</body></html>";
