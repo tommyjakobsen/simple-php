@@ -5,7 +5,7 @@ $target_file="server.txt";
 $target_file2="server2.txt";
 
 echo "<head><title>Test for OpenShift</title></head>";
-echo "<body bgcolor='#ccffcc'>";
+echo "<body bgcolor='#aaaaaa'>";
 
 
 $server1 = file_get_contents("$target_file");
