@@ -56,7 +56,7 @@ while ($i < 1200)
                         {
                         $color="color=red";
                         $med_count=0;
-                        $line="--------------------------------------------- board edge";
+                        $line="--------------------------------- board edge";
                         }else{
                         $color="";
                         $line="";
@@ -65,7 +65,7 @@ while ($i < 1200)
                 }
         if (in_array("$i", $treshArray)) {
                         $color="color=blue";
-                        $line="===================================================== wall edge";
+                        $line="============================ wall edge";
                         }
 
 
