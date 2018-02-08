@@ -23,6 +23,17 @@ if(isset($_GET["boardln"]))
         }else{
         $boardln="";
         }
+ echo "<form  action='./park.php' method='get'> 
+  Offset:
+  <input type='text' name='offsett' value='$offsett'><br>
+  Board Len:
+  <input type='text' name='boardln' value='$boardln'>
+  Edges:
+  <input type='text' name='tresh' value='$tresh'><i>(seperate with ; </i>
+<br>
+
+ <input type='submit' value='Submit'> 
+</form>";
 
 $i=0;
 
